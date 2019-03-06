@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sub</title>
+</head>
+<body>
+    <table border="0" width="100%" align="center">
+            <tr>
+                <td align="center">Subscribe</td>
+                <td align="center">New Messages</td>
+            </tr>
+            <tr>
+                <td width="50%"  align="center">
+                    <form method="post">
+                        Your following topics:
+                        <textarea type="text" name="console" readonly="readonly" cols="130" rows="10">{{ topics }}</textarea>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        Type your username<input type="text" name="sub_name">
+                        <br>
+                        Type your interested topic<input type="text" name="sub_topic">
+                         <br>
+                        (Simply type username to view the messages)
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+                <td width="50%"  align="center">
+                    <textarea type="text" name="console" readonly="readonly" cols="130" rows="30">{{ new_messages }}</textarea>
+                </td>
+            </tr>
+    </table>
+    <table border="0" width="100%" align="center">
+        <tr>
+            <td align="center" width="100%">History Messages</td>
+        </tr>
+        <tr>
+            <td align="center" width="100%">
+                <textarea type="text" name="history" readonly="readonly" cols="270" rows="30">{{ all_messages }}</textarea>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

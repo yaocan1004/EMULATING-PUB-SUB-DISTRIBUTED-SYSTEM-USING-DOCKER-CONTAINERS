@@ -1,0 +1,38 @@
+
+
+version: "2"
+services:
+  app1:
+    build: docker_version/.
+    links:
+    - db
+    ports:
+    - "5000:5000"
+    depends_on:
+    - db
+
+  app2:
+    build: docker_version/.
+    links:
+    - db
+    ports:
+    - "4000:5000"
+    depends_on:
+    - db
+
+  app3:
+    build: docker_version/.
+    links:
+    - db
+    ports:
+    - "2000:5000"
+    depends_on:
+    - db
+
+  db:
+    build: docker_db/.
+    volumes:
+      - /var/lib/mysql
+    environment:
+     MYSQL_ROOT_PASSWORD: Volcano400139
+     MYSQL_DATABASE: sub_pub
